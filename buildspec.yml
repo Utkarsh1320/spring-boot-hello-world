@@ -7,10 +7,18 @@ phases:
     commands:
       - echo Installing Maven...
       - yum install -y maven
+
   build:
     commands:
       - echo Building the project...
       - mvn clean package
+
 artifacts:
   files:
     - target/*.jar
+    - scripts/postDeployScript.sh   # Include your post-deploy script in the artifact
+  discard-paths: yes                 # This ensures the artifact is zipped into a flat structure, not a folder structure
+
+cache:
+  paths:
+    - '/root/.m2/**/*'               # Cache the Maven dependencies to speed up future builds
