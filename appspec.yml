@@ -1,11 +1,13 @@
 version: 0.0
 os: linux
 files:
-  - source: target/*.jar
-    destination: /home/ec2-user/
+  - source: springboot-hello-world.jar
+    destination: /home/ec2-user
+  - source: StartServer.sh
+    destination: /home/ec2-user
 
 hooks:
   AfterInstall:
-    - location: scripts/start_server.sh
+    - location: StartServer.sh
       timeout: 300
       runas: ec2-user
