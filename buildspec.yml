@@ -16,7 +16,7 @@ phases:
 artifacts:
   files:
     - target/*.jar
-    - scripts/postDeployScript.sh   # Include your post-deploy script in the artifact
+    - scripts/StartServer.sh   # Include your post-deploy script in the artifact
   discard-paths: yes                 # This ensures the artifact is zipped into a flat structure, not a folder structure
 
 cache:
