@@ -12,13 +12,15 @@ phases:
     commands:
       - echo Building the project...
       - mvn clean package
+      - cp target/*.jar springboot-hello-world.jar  # Ensure consistent filename
 
 artifacts:
   files:
-    - target/*.jar
-    - StartServer.sh   # Include your post-deploy script in the artifact
-  discard-paths: yes                 # This ensures the artifact is zipped into a flat structure, not a folder structure
+    - springboot-hello-world.jar
+    - StartServer.sh
+    - appspec.yml
+  discard-paths: yes
 
 cache:
   paths:
-    - '/root/.m2/**/*'               # Cache the Maven dependencies to speed up future builds
+    - '/root/.m2/**/*'
