@@ -12,7 +12,10 @@ phases:
     commands:
       - echo Building the project...
       - mvn clean package
-      - cp target/*.jar springboot-hello-world.jar  # Ensure consistent filename
+      - cp target/*.jar springboot-hello-world.jar
+      - chmod +x StartServer.sh
+
+      # Ensure consistent filename
 
 artifacts:
   files:
