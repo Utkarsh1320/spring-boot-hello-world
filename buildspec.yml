@@ -21,7 +21,6 @@ artifacts:
   files:
     - springboot-hello-world.jar
     - StartServer.sh
-    - appspec.yml
   discard-paths: yes
 
 cache:
