@@ -1,10 +1,17 @@
 version: 0.0
 os: linux
+
 files:
   - source: springboot-hello-world.jar
     destination: /home/ec2-user
   - source: StartServer.sh
     destination: /home/ec2-user
+
+permissions:
+  - object: /home/ec2-user/StartServer.sh
+    pattern: "**"
+    owner: ec2-user
+    mode: 755  # Ensure it's executable
 
 hooks:
   AfterInstall:
