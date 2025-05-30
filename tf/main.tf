@@ -10,7 +10,7 @@ provider "aws" {
 }
 
 locals {
-  cluster_name = "simple-eks-cluster"
+  cluster_name = "kubernetes-project-cluster"
   vpc_id       = "vpc-0f962a1dbb1f03a2b"
 
   public_subnet_ids = [
