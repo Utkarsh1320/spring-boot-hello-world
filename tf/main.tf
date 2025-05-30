@@ -14,7 +14,7 @@ locals {
   vpc_id       = "vpc-0f962a1dbb1f03a2b"
 
   public_subnet_ids = [
-    "subnet-0ee49fa00d513402",
+    "subnet-08036c981ddfee071",
     "subnet-02a524a70fc5ddb5",
     "subnet-08036c981ddfee071",
     "subnet-0223ac270aaaca282",
