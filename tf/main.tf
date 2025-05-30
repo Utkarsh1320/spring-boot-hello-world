@@ -16,10 +16,10 @@ locals {
   public_subnet_ids = [
     "subnet-08036c981ddfee071",
     "subnet-02a524a7c0fc5ddb5",
-    "subnet-0223ac270aaaca282",
-    "subnet-0e348f15d8bdb8b49",
-    "subnet-085dabe203b05487e",
-    "subnet-0ee4f9fa00d513402"
+    # "subnet-0223ac270aaaca282",
+    # "subnet-0e348f15d8bdb8b49",
+    # "subnet-085dabe203b05487e",
+    # "subnet-0ee4f9fa00d513402"
   ]
 }
 
